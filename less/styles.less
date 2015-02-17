@@ -4,7 +4,7 @@ body {
 
 // Scene
 // ---------------------------
-#scene {
+.scene {
     padding: 0;
     list-style: none;
     margin: 0;
@@ -41,20 +41,12 @@ li {
 // Foreground styles
 // --------------------------
 .foreground {
-    display: block;
+    background-image: url('../../img/foreground.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 100%;
     height: 100%;
-
-    .ground {
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        height: 100px;
-        background-color: green;
-    }
-
-    .snowman {
-        background-image: url('../../img/snowman.png');
-    }
+    width: 100%;
 }
 
 // Banner styles
