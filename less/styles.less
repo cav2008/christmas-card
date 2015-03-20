@@ -1,3 +1,13 @@
+// Mixin
+// ---------------------------
+.blur(@deg: 0px) {
+    -webkit-filter: blur(@deg);
+    -moz-filter: blur(@deg);
+    -o-filter: blur(@deg);
+    -ms-filter: blur(@deg);
+    filter: blur(@deg);
+}
+
 body {
     margin: 0;
 }
@@ -26,6 +36,7 @@ li {
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    .blur(1.5px);
 }
 
 // Midground styles
@@ -38,6 +49,7 @@ li {
     height: 110%;
     position: absolute;
     left: -50px;
+    .blur(1px);
 }
 
 // Foreground styles
@@ -51,6 +63,7 @@ li {
     width: 110%;
     position: absolute;
     left: -60px;
+    .blur(0.7px);
 }
 
 // Banner styles

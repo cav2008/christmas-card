@@ -19,6 +19,11 @@ li {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  -webkit-filter: blur(1.5px);
+  -moz-filter: blur(1.5px);
+  -o-filter: blur(1.5px);
+  -ms-filter: blur(1.5px);
+  filter: blur(1.5px);
 }
 .midground {
   background-image: url('../../img/midground.png');
@@ -28,6 +33,11 @@ li {
   height: 110%;
   position: absolute;
   left: -50px;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
 }
 .foreground {
   background-image: url('../../img/foreground.png');
@@ -38,6 +48,11 @@ li {
   width: 110%;
   position: absolute;
   left: -60px;
+  -webkit-filter: blur(0.7px);
+  -moz-filter: blur(0.7px);
+  -o-filter: blur(0.7px);
+  -ms-filter: blur(0.7px);
+  filter: blur(0.7px);
 }
 .banner {
   background-image: url('../../img/banner.png');
