@@ -3,18 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>Merry Christmas 2015 :D</title>
-        <!--<script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/parallax/jquery.parallax.js"></script>
-        <script src="js/app.js"></script>-->
-        <script src="dist/js/christmas.js"></script>
+
+        <!-- dev scripts -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/parallax/deploy/jquery.parallax.js"></script>
+        <script src="bower_components/jquery-snowfall/src/snowfall.jquery.js"></script>
+        <script src="js/app.js"></script>
+
+        <!-- production scripts -->
+        <!-- <script src="dist/js/christmas.js"></script> -->
 
         <link rel="stylesheet" type="text/css" href="dist/css/styles.css">
     </head>
     <body>
+        <div>
         <ul class="scene">
             <li class="layer" data-depth="0.00"><div class="background"></div></li>
             <li class="layer" data-depth="0.20"><div class="midground"></div></li>
-            <li class="layer" data-depth="0.40"><div class="banner"></div></li>
+            <li class="layer" data-depth="0.40">
+                <div class="banner"></div>
+                <div class="text-wrap">
+                    <h1></h1>
+                <div>
+            </li>
             <li class="layer" data-depth="0.60"><div class="foreground"></div></li>
         </ul>
     </body>

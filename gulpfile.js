@@ -19,8 +19,10 @@ gulp.task('lint', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src(['bower_components/jquery/dist/jquery.js', 
-    'bower_components/parallax/deploy/jquery.parallax.js', 'js/*.js'])
+    return gulp.src(['bower_components/jquery/dist/jquery.js',
+    'bower_components/parallax/deploy/jquery.parallax.js',
+    'bower_components/snowstorm/snowstorm.js',
+    'js/*.js'])
     .pipe(concat('christmas.js'))
     .pipe(gulp.dest('dist/js/'))    //gulp.dest is the destination of the output
     .pipe(rename('christmas.min.js'))
@@ -46,7 +48,7 @@ gulp.task('css-lint', function() {
 // Watch Files for Changes
 gulp.task('watch', function() {
     gulp.watch('less/*.less', ['less']);
-    gulp.watch('dist/css/*.css', ['css-lint'])
+    gulp.watch('dist/css/*.css', ['css-lint']);
     gulp.watch('js/*.js', ['lint', 'scripts']);
 });
 
