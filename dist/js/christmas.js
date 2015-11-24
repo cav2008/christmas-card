@@ -9784,8 +9784,16 @@ $(document).ready(function() {
     $('.scene').height(height)
         .width(width);
 
+    // turn off parallax if it is firefox because of lag
+    var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+    if (is_firefox) {
+        console.log('firefox true');
+        $('.layer').data('depth', 0);
+    }
+
     // Starting up parallax.js
-    $('.scene').parallax();
+    var $scene = $('.scene').parallax();
 
     console.log(height, width);
 
@@ -9805,5 +9813,6 @@ $(document).ready(function() {
     var name = window.location.href.slice(window.location.href.indexOf('?') + 1);
     console.log(name);
 
-    $('h1').text(name);
+    $('.name').text(name);
+
 });
