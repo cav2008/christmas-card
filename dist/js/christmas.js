@@ -9790,8 +9790,6 @@ $(document).ready(function() {
         var height = window.innerHeight,
             width = window.innerWidth;
 
-        console.log(height, width);
-
         // Setting the height and width of the main element
         $('.scene').height(height)
             .width(width);
@@ -9807,7 +9805,6 @@ $(document).ready(function() {
     var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
     if (is_firefox) {
-        console.log('firefox true');
         $('.layer').data('depth', 0);
     }
 
@@ -9824,11 +9821,12 @@ $(document).ready(function() {
 
     // Start music
     var audio = new Audio('sound/theme.mp3');
-    // audio.play();
+    audio.play();
 
     // Set name
-    var name = window.location.href.slice(window.location.href.indexOf('?') + 1);
-    console.log(name);
+    if (window.location.href.indexOf('?') > -1) {
+        var name = window.location.href.slice(window.location.href.indexOf('?') + 1);
 
-    $('.name').text(name);
+        $('.name').text(name);
+    }
 });
