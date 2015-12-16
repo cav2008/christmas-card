@@ -21,7 +21,7 @@ gulp.task('lint', function() {
 gulp.task('scripts', function() {
     return gulp.src(['bower_components/jquery/dist/jquery.js',
     'bower_components/parallax/deploy/jquery.parallax.js',
-    'bower_components/snowstorm/snowstorm.js',
+    'bower_components/jquery-snowfall/dist/snowfall.jquery.min.js',
     'js/*.js'])
     .pipe(concat('christmas.js'))
     .pipe(gulp.dest('dist/js/'))    //gulp.dest is the destination of the output
